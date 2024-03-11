@@ -1,0 +1,162 @@
+@font-face {
+    font-family: Intro;
+    src: url("IntroDemoCond-LightCAPS.otf");
+}
+@font-face {
+    font-family: "Osw";
+    src: url("Oswald-SemiBold.ttf");
+}
+body {
+    background: url("https://images.unsplash.com/photo-1549262803-693ee58a796b?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Intro", sans-serif;
+}
+.hidden {
+    display: none;
+}
+.active {
+    display: flex;
+}
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.form-container {
+    margin: 0 auto;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.carBrand-container {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    margin-bottom: 50px;
+}
+.carBrand-container-inputs select {
+    padding: 10px;
+    font-family: "Intro", sans-serif;
+}
+.radioBTN-container {
+    display: flex;
+    align-items: center;
+    gap: 30%;
+    margin-bottom: 50px;
+}
+
+.radioBTN-container-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.engine-capacity-input {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+
+.engine-capacity-input select {
+    padding: 10px;
+    font-family: "Intro", sans-serif;
+}
+
+.car-condition-radioBtn {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10%;
+}
+
+.car-condition-radioBtn-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-condition-used {
+    margin-top: 20px;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    gap: 30%;
+    margin-top: 50px;
+}
+
+.payment-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20%;
+}
+
+.btn button {
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Intro", sans-serif;
+    font-size: 1.2em;
+}
+
+.button-for-models {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button-for-models button {
+    padding: 10px;
+    font-family: "Intro", sans-serif;
+    text-wrap: wrap;
+}
+
+.model-select {
+    font-family: "Intro", sans-serif;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* .price-text {
+    font-size: 1.3em;
+} */
+
+.price-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Osw", sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 0 0 0 rgb(255, 255, 255);
+    color: transparent;
+    animation: shadows 10s infinite ease-in;
+}
+
+@keyframes shadows {
+    60% {
+        text-shadow: 0 0 0 crimson;
+    }
+    90% {
+        text-shadow: 0 30px 40px transparent;
+    }
+    100% {
+        text-shadow: 0 0 0 transparent;
+    }
+}

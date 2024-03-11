@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Auto Calculator</title>
+  </head>
+  <body>
+    <h1>Рассчитайте стоимость своего автомобиля</h1>
+    <div class="form-container">
+      <form name="mainForm" class="mainForm">
+        <div class="carBrand-container">
+          <div class="carBrand-container-title">
+            <h3>Марка автомобиля:</h3>
+          </div>
+          <div class="carBrand-container-inputs">
+            <select name="carBrand" id="carBrand" required>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="Tesla">Tesla</option>
+              <option value="BMW">BMW</option>
+              <option value="Lada">Lada</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="radioBTN-container">
+          <div class="radioBTN-container-title">
+            <h3>Тип топлива:</h3>
+          </div>
+          <div class="radioBTN-container-inputs">
+            <div>
+              <input type="radio" id="petrol" name="gasoline" />
+              <label for="petrol">Бензин</label>
+            </div>
+            <div>
+              <input type="radio" id="electro" name="gasoline" />
+              <label for="electro">Электричество</label>
+            </div>
+            <div>
+              <input type="radio" id="diesel" name="gasoline" />
+              <label for="diesel">Дизель</label>
+            </div>
+            <div>
+              <input type="radio" id="gas" name="gasoline" />
+              <label for="gas">газ</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-for-models">
+          <button id="models-btn">
+            Показать модели для выбранных параметров
+          </button>
+          <p class="models-error"></p>
+        </div>
+
+        <div class="model-container">
+          <div class="hidden">
+            <h3>Модель автомобиля:</h3>
+          </div>
+          <div>
+            <select
+              name="carModelMercedes"
+              id="carModelMercedes"
+              class="model-select hidden"
+            >
+              <option value="a-class">a-class</option>
+              <option value="c-class">c-class</option>
+              <option value="gle-class">gle-class</option>
+              <option value="s-class">s-class</option>
+            </select>
+            <select
+              name="carModelTesla"
+              id="carModelTesla"
+              class="model-select hidden"
+            >
+              <option value="Model-S">Model-S</option>
+              <option value="Model-Y">Model-Y</option>
+              <option value="Model-3">Model-3</option>
+            </select>
+            <select
+              name="carModelBmw"
+              id="carModelBmw"
+              class="model-select hidden"
+            >
+              <option value="X1">X1</option>
+              <option value="X3">X3</option>
+              <option value="X5">X5</option>
+              <option value="X7">X7</option>
+            </select>
+            <select
+              name="carModelLada"
+              id="carModelLada"
+              class="model-select hidden"
+            >
+              <option value="Vesta">Vesta</option>
+              <option value="Granta">Granta</option>
+              <option value="Priora">Priora</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="engine-capacity-input">
+          <h3>Объем двигателя:</h3>
+          <select
+            type="text"
+            id="engine-capacity"
+            placeholder="от 1.1л до 3.5л"
+          >
+            <option value="1.1">Малолитриажная (1.1л - 1.8л)</option>
+            <option value="1.8">Среднелитражная (1.8л - 3.5л)</option>
+          </select>
+        </div>
+
+        <div class="car-condition-radioBtn">
+          <div class="car-condition-radioBtn-title">
+            <h3>Состояние автомобиля:</h3>
+          </div>
+          <div class="car-condition-radioBtn-inputs">
+            <div>
+              <input type="radio" id="new-condition" name="car-condition" />
+              <label for="new-condition">Новый автомобиль</label>
+            </div>
+            <div>
+              <input type="radio" id="used-condition" name="car-condition" />
+              <label for="used-condition">Поддержанный автомобиль</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-condition-used hidden">
+          <input type="radio" id="used-1" name="car-condition" />
+          <label for="used-1">1 владелец</label>
+          <input type="radio" id="used-2" name="car-condition" />
+          <label for="used-2">2 владельца</label>
+          <input type="radio" id="used-3" name="car-condition" />
+          <label for="used-3">3 и более владельца</label>
+        </div>
+
+        <div class="payment">
+          <div class="payment-title">
+            <h3>Тип оплаты:</h3>
+          </div>
+          <div class="payment-inputs">
+            <div>
+              <input type="radio" id="cash-payment" name="payment" />
+              <label for="cash-payment">Оплата наличными</label>
+            </div>
+            <div>
+              <input type="radio" id="card-payment" name="payment" />
+              <label for="card-payment">Оплата картой</label>
+            </div>
+            <div>
+              <input type="radio" id="entity-payment" name="payment" />
+              <label for="entity-payment">Счет на юридическое лицо</label>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <button class="submit-btn" type="submit">Рассчитать стоимость</button>
+          <p class="price-text"></p>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
